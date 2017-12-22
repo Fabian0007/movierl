@@ -1,0 +1,12 @@
+{application, movierl,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { movierl_app, []}},
+  {env, []}
+ ]}.
