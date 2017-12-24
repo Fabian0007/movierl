@@ -27,9 +27,13 @@ stop(_State) ->
 %% ===================================================================
 routes() ->
     [
-     {'_', [
-            {"/", movierl_handler, []}
-           ]}
+     {'_', [{"/movie/popular", getpopular_handler, []},
+        {"/movie/:id", getmovie_handler, []},
+        {"/person/:id", getperson_handler, []},
+        {"/search/multi/:search/:page", getsearch_handler, []},
+        {"/search/movie/:search/:page", getsearchperson_handler, []},
+        {"/search/person/:search/:page", getsearchmovie_handler, []}
+        ]}
     ].
 
 port() ->
